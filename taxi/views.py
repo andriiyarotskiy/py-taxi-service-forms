@@ -81,8 +81,8 @@ class CarDeleteView(BaseDeleteView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        object = self.get_object()
-        context["cancel_url"] = object.get_absolute_url()
+        car = self.get_object()
+        context["cancel_url"] = car.get_absolute_url()
         return context
 
 
